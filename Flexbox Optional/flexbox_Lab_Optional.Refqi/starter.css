@@ -1,0 +1,66 @@
+/* Base Reset & Aesthetics (Pre-coded for students) */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, sans-serif; background: #f8fafc; color: #1e293b; padding: 2rem; }
+.exercise-block { background: #ffffff; padding: 1.5rem; margin-bottom: 2rem; border-radius: 8px; border: 1px solid #e2e8f0; }
+h2 { margin-bottom: 1rem; font-size: 1.25rem; color: #0f172a; }
+
+/* Visual styling for elements */
+.navbar { background: #1e293b; color: #fff; padding: 0.75rem 1.5rem; border-radius: 6px; }
+.navbar a { color: #cbd5e1; text-decoration: none; }
+.navbar button { background: #3b82f6; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; }
+
+.pricing-container { gap: 1rem; }
+.card { background: #f1f5f9; padding: 1.5rem; border-radius: 6px; border: 1px solid #cbd5e1; min-width: 220px; }
+.card.featured { border-color: #3b82f6; background: #eff6ff; }
+.price { font-size: 1.5rem; font-weight: bold; margin: 0.5rem 0; }
+.price span { font-size: 0.875rem; color: #64748b; }
+.card-btn { background: #0f172a; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; width: 100%; margin-top: 1rem; cursor: pointer; }
+
+.comment-box { background: #f8fafc; padding: 1rem; border-radius: 6px; border: 1px solid #e2e8f0; }
+.avatar { width: 50px; height: 50px; border-radius: 50%; }
+.author { font-weight: bold; }
+.timestamp { font-size: 0.75rem; color: #64748b; }
+
+/* ==========================================================================
+   LÖSUNGEN (nur Flexbox-Eigenschaften, HTML unverändert)
+   ========================================================================== */
+
+/* Aufgabe 1: .navbar & .nav-links */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Logo links, Button rechts */
+  align-items: center;            /* vertikal zentriert */
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;                    /* Abstand zwischen den Links */
+}
+
+/* Aufgabe 2: .pricing-container, .card & .card-btn */
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;                /* umbrechen bei schmalen Bildschirmen */
+  align-items: stretch;           /* alle Karten gleich hoch */
+}
+.card {
+  flex: 1;                        /* Platz gleichmäßig teilen */
+  display: flex;
+  flex-direction: column;         /* Karteninhalt vertikal */
+}
+.card-btn {
+  margin-top: auto;               /* Button ganz nach unten */
+}
+
+/* Aufgabe 3: .comment-box, .comment-content & .comment-header */
+.comment-box {
+  display: flex;
+  align-items: flex-start;        /* Avatar oben */
+  gap: 1rem;
+}
+.comment-content {
+  flex: 1;                        /* füllt den restlichen Platz */
+}
+.comment-header {
+  display: flex;
+  justify-content: space-between; /* Zeitstempel ganz rechts */
+}
